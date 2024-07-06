@@ -57,6 +57,19 @@ const seriesArray = [
     image: "series/onepice.jpg",
     name: "One Piece",
     description:
-      "Monkey D. Luffy e sua tripulação de piratas buscam o lendário tesouro One Piece para se tornarem os reis dos piratas.",
+      "A história de um mundo novo, onde contos de fadas e vida moderna colidem. Emma Swan está feliz com sua vida; seu filho Henry, que ela deixou há mais de dez anos, reaparece e acha que ela é a filha de Branca de Neve e do Príncipe Encantado.",
   },
 ];
+
+for (const serie of seriesArray) {
+  const card = document.createElement("article")
+  card.classList.add("series--card")
+  card.innerHTML = `<img class="card--img" src=${serie.image} alt="Imagem da série ${serie.name}">
+  <div class="card--conteudo">
+    <h3 class="card--titulo">${serie.name} <i class="fa-regular fa-heart"></i></h3>
+    <p class="card--desc">${serie.description}</p>
+    <button class="btn--primario">Veja agora</button>
+  </div>`
+ const conteiner = document.getElementById("container--series")
+ conteiner.append(card)
+}
